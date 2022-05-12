@@ -1,0 +1,85 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 100vh;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(145, 71, 71, 0.739);
+    padding: 100px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.passwordText, .copyButton, .generateButton{
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.865);
+    border-radius: 5px;
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.buttonDiv{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.generateButton{
+    width: 100%;
+    margin: 0px;
+    background: rgba(255, 255, 255, 0.598);
+    cursor: pointer;
+}
+
+.generateButton:hover{
+    background: rgba(195, 195, 195, 0.598);
+}
+
+.generateButton:active{
+    background: rgba(239, 239, 239, 0.598);
+}
+
+.copyButton{
+    background:rgb(239, 239, 239);
+}
+
+.copyButton:hover{
+    background: rgba(230, 230, 230, 0.598);
+}
+
+.copyButton:active{
+    background: rgb(239, 239, 239);
+}
+
+.copied{
+    opacity: 0;
+    font-size: 28px !important;
+    padding: 10px 20px;
+    margin: 0;
+    margin-top: 220px;
+    position: fixed;
+    background: rgba(230, 230, 230, 0.598);
+    border-radius: 5px;
+}
+
+.anim{
+    transition: opacity 0.5s ease-out;
+    opacity: 1;
+}
