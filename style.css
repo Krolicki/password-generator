@@ -6,6 +6,7 @@ body, html{
     scroll-behavior: smooth;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 100vh;
+    background: rgba(199, 199, 199, 0.739);
 }
 
 .content{
@@ -36,6 +37,10 @@ body, html{
     text-align: center;
 }
 
+.passwordText{
+    cursor: text ;
+}
+
 .buttonDiv{
     margin-top: 20px;
     width: 100%;
@@ -57,7 +62,8 @@ body, html{
 }
 
 .copyButton{
-    background:rgb(239, 239, 239);
+    background:rgba(239, 239, 239, 0.776);
+    cursor: pointer;
 }
 
 .copyButton:hover{
@@ -65,7 +71,7 @@ body, html{
 }
 
 .copyButton:active{
-    background: rgb(239, 239, 239);
+    background: rgba(239, 239, 239);
 }
 
 .copied{
@@ -75,8 +81,9 @@ body, html{
     margin: 0;
     margin-top: 220px;
     position: fixed;
-    background: rgba(230, 230, 230, 0.598);
+    background: rgba(230, 230, 230, 0.446);
     border-radius: 5px;
+    cursor: default;
 }
 
 .anim{

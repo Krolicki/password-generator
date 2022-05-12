@@ -5,6 +5,7 @@ const copied = document.querySelector(".copied");
 
 generateButton.addEventListener("click",function(){
     passwordText.value = generate(8);
+    copied.classList.remove("anim")
 })
 
 copyButton.addEventListener("click",function(){
