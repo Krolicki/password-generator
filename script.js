@@ -2,9 +2,11 @@ const passwordText = document.querySelector(".passwordText");
 const copyButton = document.querySelector(".copyButton");
 const generateButton = document.querySelector(".generateButton");
 const copied = document.querySelector(".copied");
+const numberChar = document.querySelector(".numberChar");
+const slider = document.querySelector(".slider");
 
 generateButton.addEventListener("click",function(){
-    passwordText.value = generate(8);
+    passwordText.value = generate(numberChar.value);
     copied.classList.remove("anim")
 })
 
@@ -15,6 +17,10 @@ copyButton.addEventListener("click",function(){
         navigator.clipboard.writeText(passwordText.value);
         copied.classList.add("anim");
     }
+})
+
+slider.addEventListener("input", function(){
+	numberChar.value = slider.value;
 })
 
 function generate(num) {

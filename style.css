@@ -79,7 +79,7 @@ body, html{
     font-size: 28px !important;
     padding: 10px 20px;
     margin: 0;
-    margin-top: 220px;
+    margin-top: 40vh;
     position: fixed;
     background: rgba(230, 230, 230, 0.446);
     border-radius: 5px;
@@ -89,4 +89,53 @@ body, html{
 .anim{
     transition: opacity 0.5s ease-out;
     opacity: 1;
+}
+
+.sliderDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.5vmin;
+}
+
+.sliderDiv p{
+    margin: 1.5vmin auto;
+}
+
+.slider{
+    -webkit-appearance: none; 
+    appearance: none;
+    margin-top: 2.5vmin;
+    width: 80%;
+    background: transparent;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button{
+      -webkit-appearance: none;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    background: rgba(255, 255, 255, 0.313);
+    border-radius: 10px; 
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 20px; 
+    width: 20px; 
+    border-radius: 50%;
+    background-color: #373737;
+    cursor: pointer;
+}
+
+.numberChar{
+    background: transparent;
+    border: none;
+    font-size: 3.5vmin;
+    text-align: center;
+    background: #c8c8c8c8;
+    border-radius: 5px;
 }
