@@ -23,6 +23,13 @@ slider.addEventListener("input", function(){
 	numberChar.value = slider.value;
 })
 
+numberChar.addEventListener("change", function(){
+	if(numberChar.value>18)
+        numberChar.value = 18;
+	else if(numberChar.value<4)
+        numberChar.value = 4;
+});
+
 function generate(num) {
     let pass = '';
     let source = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
