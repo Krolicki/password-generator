@@ -13,6 +13,7 @@ body, html{
     display: flex;
     align-items: center;
     justify-content: center;
+	flex-direction: column;
     height: 100vh;
     width: 100vw;
 }
@@ -23,13 +24,14 @@ body, html{
     justify-content: center;
     flex-direction: column;
     background: rgba(145, 71, 71, 0.739);
-    padding: 100px;
-    border-radius: 10px;
+    padding: 12vmin 6vmax;
+    border-radius: 2vmin;
     font-size: 18px;
+	margin-top: 11vmin;
 }
 
 .passwordText, .copyButton, .generateButton{
-    font-size: 30px;
+    font-size: 5vmin;
     color: rgba(0, 0, 0, 0.865);
     border-radius: 5px;
     border: none;
@@ -38,7 +40,14 @@ body, html{
 }
 
 .passwordText{
-    cursor: text ;
+    cursor: text;
+	margin-right: 2vmin;
+}
+
+.passDiv{
+	display: flex;
+	justify-content: space-between;	
+	width: 100%;
 }
 
 .buttonDiv{
@@ -76,12 +85,12 @@ body, html{
 
 .copied{
     opacity: 0;
-    font-size: 28px !important;
+    font-size: 4vmin !important;
     padding: 10px 20px;
     margin: 0;
-    margin-top: 40vh;
-    position: fixed;
-    background: rgba(230, 230, 230, 0.446);
+    margin-top: 3vmin;
+    position: relative;
+    background: rgba(0, 0, 0, 0.250);
     border-radius: 5px;
     cursor: default;
 }
@@ -102,6 +111,7 @@ body, html{
 
 .sliderDiv p{
     margin: 1.5vmin auto;
+	font-size: 5vmin;
 }
 
 .slider{
@@ -134,7 +144,7 @@ input[type="range"]::-webkit-slider-thumb {
 .numberChar{
     background: transparent;
     border: none;
-    font-size: 3.5vmin;
+    font-size: 5vmin;
     text-align: center;
     background: #c8c8c8c8;
     border-radius: 5px;
