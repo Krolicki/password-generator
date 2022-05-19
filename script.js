@@ -18,6 +18,9 @@ copyButton.addEventListener("click",function(){
     if(passwordText.value != "Click generate"){
         navigator.clipboard.writeText(passwordText.value);
         copied.classList.add("anim");
+        setTimeout(function() {
+            copied.classList.remove("anim");
+        }, 3000);
     }
 })
 
@@ -53,7 +56,7 @@ function fill(){
 
 }
 
-more(4);
+more(0);
 function generate(num) {
     let pass = '';
     let source = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';

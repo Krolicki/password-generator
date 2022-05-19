@@ -14,7 +14,7 @@ body, html{
     align-items: center;
     justify-content: center;
 	flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 }
 
@@ -27,7 +27,7 @@ body, html{
     padding: 12vmin 6vmax;
     border-radius: 2vmin;
     font-size: 18px;
-	margin-top: 11vmin;
+    margin: auto 0;
 }
 
 .passwordText, .copyButton, .generateButton{
@@ -80,23 +80,24 @@ body, html{
 }
 
 .copyButton:active{
-    background: rgba(239, 239, 239);
+    background: rgb(248, 243, 243);
 }
 
 .copied{
     opacity: 0;
-    font-size: 4vmin !important;
-    padding: 10px 20px;
+    color:rgb(199, 199, 199);
+    font-size: 5vmin !important;
+    padding: 3vmin 6vmin;
     margin: 0;
-    margin-top: -10vmin;
-    position: relative;
-    background: rgba(255, 255, 255, 0.25);
+    bottom: 5vh;
+    position: fixed;
+    background: rgba(65, 65, 65, 0.892);
     border-radius: 5px;
     cursor: default;
+    transition: opacity 0.5s ease-out;
 }
 
 .anim{
-    transition: opacity 0.5s ease-out;
     opacity: 1;
 }
 
