@@ -41,7 +41,7 @@ body, html{
 
 .passwordText{
     cursor: text;
-	margin-right: 2vmin;
+	margin: 0 2vmin 1vmin 0;
 }
 
 .passDiv{
@@ -88,9 +88,9 @@ body, html{
     font-size: 4vmin !important;
     padding: 10px 20px;
     margin: 0;
-    margin-top: 3vmin;
+    margin-top: -10vmin;
     position: relative;
-    background: rgba(0, 0, 0, 0.250);
+    background: rgba(255, 255, 255, 0.25);
     border-radius: 5px;
     cursor: default;
 }
@@ -148,4 +148,11 @@ input[type="range"]::-webkit-slider-thumb {
     text-align: center;
     background: #c8c8c8c8;
     border-radius: 5px;
+}
+
+#passwords{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }

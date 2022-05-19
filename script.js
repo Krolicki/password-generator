@@ -4,10 +4,12 @@ const generateButton = document.querySelector(".generateButton");
 const copied = document.querySelector(".copied");
 const numberChar = document.querySelector(".numberChar");
 const slider = document.querySelector(".slider");
+const passwords = document.getElementById("passwords");
 
 generateButton.addEventListener("click",function(){
     passwordText.value = generate(numberChar.value);
     copied.classList.remove("anim")
+    fill();
 })
 
 copyButton.addEventListener("click",function(){
@@ -30,6 +32,28 @@ numberChar.addEventListener("change", function(){
         numberChar.value = 4;
 });
 
+function more(numb){
+    for(let i=0; i<numb; i++){
+        let add = document.createElement("input");
+        add.setAttribute("type","text");
+        add.setAttribute("class","passwordText");
+        add.setAttribute("id","p"+(i+2));
+        add.setAttribute("value",generate(numberChar.value));
+        add.setAttribute("disabled", "");
+        passwords.appendChild(add);
+    }
+}
+
+function fill(){
+    let fields = document.querySelectorAll(".passwordText");
+
+    fields.forEach(function(el){
+        el.value = generate(numberChar.value);
+    });
+
+}
+
+more(4);
 function generate(num) {
     let pass = '';
     let source = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
