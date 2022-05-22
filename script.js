@@ -5,27 +5,45 @@ const copied = document.querySelector(".copied");
 const numberChar = document.querySelector(".numberChar");
 const slider = document.querySelector(".slider");
 const passwords = document.getElementById("passwords");
+const numberPass = document.getElementById("numberPass");
+const sliderPass = document.getElementById("sliderPass");
+
+var numberOfPasswords = 1;
 
 generateButton.addEventListener("click",function(){
-    passwordText.value = generate(numberChar.value);
+    if(numberPass.value != numberOfPasswords){
+        numberOfPasswords = numberPass.value;
+        clear();
+        more(numberPass.value-1);
+    }
     copied.classList.remove("anim")
     fill();
 })
 
 copyButton.addEventListener("click",function(){
-    passwordText.select();
-    passwordText.setSelectionRange(0, 99999);
-    if(passwordText.value != "Click generate"){
-        navigator.clipboard.writeText(passwordText.value);
-        copied.classList.add("anim");
-        setTimeout(function() {
-            copied.classList.remove("anim");
-        }, 3000);
-    }
+    let fields = document.querySelectorAll(".passwordText");
+    let copyText = "";
+
+    fields.forEach(function(el){
+        el.select();
+        el.setSelectionRange(0, 99999);
+        if(el.value != "Click generate"){
+            copyText += el.value + "\n";
+        }
+    });
+    navigator.clipboard.writeText(copyText);
+    copied.classList.add("anim");
+    setTimeout(function() {
+        copied.classList.remove("anim");
+    }, 3000);
 })
 
 slider.addEventListener("input", function(){
 	numberChar.value = slider.value;
+})
+
+sliderPass.addEventListener("input", function(){
+	numberPass.value = sliderPass.value;
 })
 
 numberChar.addEventListener("change", function(){
@@ -33,13 +51,22 @@ numberChar.addEventListener("change", function(){
         numberChar.value = 18;
 	else if(numberChar.value<4)
         numberChar.value = 4;
+    numberChar.value = Math.round(numberChar.value);
+});
+
+numberPass.addEventListener("change", function(){
+	if(numberPass.value>30)
+        numberPass.value = 30;
+	else if(numberPass.value<1)
+        numberPass.value = 1;
+    numberPass.value = Math.round(numberPass.value);
 });
 
 function more(numb){
     for(let i=0; i<numb; i++){
         let add = document.createElement("input");
         add.setAttribute("type","text");
-        add.setAttribute("class","passwordText");
+        add.setAttribute("class","passwordText passwordTextMore");
         add.setAttribute("id","p"+(i+2));
         add.setAttribute("value",generate(numberChar.value));
         add.setAttribute("disabled", "");
@@ -56,7 +83,14 @@ function fill(){
 
 }
 
-more(0);
+function clear(){
+    let fields = document.querySelectorAll(".passwordTextMore");
+
+    fields.forEach(function(el){
+        el.remove();  
+    });
+}
+
 function generate(num) {
     let pass = '';
     let source = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*';
