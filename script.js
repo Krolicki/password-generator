@@ -28,9 +28,17 @@ copyButton.addEventListener("click",function(){
         el.select();
         el.setSelectionRange(0, 99999);
         if(el.value != "Click generate"){
-            copyText += el.value + "\n";
+            if(numberOfPasswords != 1){
+                if(fields[numberOfPasswords -1] !== el)
+                    copyText += el.value + "\n";
+                else
+                    copyText += el.value;
+            }
+            else
+                copyText += el.value;
         }
     });
+
     navigator.clipboard.writeText(copyText);
     copied.classList.add("anim");
     setTimeout(function() {

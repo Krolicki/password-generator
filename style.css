@@ -80,6 +80,9 @@ body, html{
 .copyButton{
     background:rgba(239, 239, 239, 0.776);
     cursor: pointer;
+    max-height: 15vh;
+    position: sticky;
+    top: 10px;
 }
 
 .copyButton:hover{
