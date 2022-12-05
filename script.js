@@ -11,6 +11,8 @@ const sliderPass = document.getElementById("sliderPass");
 var numberOfPasswords = 1;
 
 generateButton.addEventListener("click",function(){
+    if(copyButton.classList.contains("copyDisabled"))
+        copyButton.classList.remove("copyDisabled")
     if(numberPass.value != numberOfPasswords){
         numberOfPasswords = numberPass.value;
         clear();
@@ -36,14 +38,14 @@ copyButton.addEventListener("click",function(){
             }
             else
                 copyText += el.value;
+            
+            navigator.clipboard.writeText(copyText);
+            copied.classList.add("anim");
+            setTimeout(function() {
+                copied.classList.remove("anim");
+            }, 3000);
         }
     });
-
-    navigator.clipboard.writeText(copyText);
-    copied.classList.add("anim");
-    setTimeout(function() {
-        copied.classList.remove("anim");
-    }, 3000);
 })
 
 slider.addEventListener("input", function(){

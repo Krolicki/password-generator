@@ -70,7 +70,7 @@ body, html{
 }
 
 .generateButton:hover{
-    background: rgba(195, 195, 195, 0.598);
+    background: rgba(255, 255, 255, 0.689);
 }
 
 .generateButton:active{
@@ -85,8 +85,13 @@ body, html{
     top: 10px;
 }
 
+.copyDisabled{
+    pointer-events: none;
+    background:rgba(239, 239, 239, 0.361);
+}
+
 .copyButton:hover{
-    background: rgba(230, 230, 230, 0.598);
+    background:rgba(239, 239, 239, 0.813);
 }
 
 .copyButton:active{
