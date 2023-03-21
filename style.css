@@ -5,9 +5,8 @@ body, html{
     overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     background: rgba(199, 199, 199, 0.739);
-
 }
 
 .content{
@@ -25,14 +24,14 @@ body, html{
     justify-content: center;
     flex-direction: column;
     background: rgba(145, 71, 71, 0.739);
-    padding: 12vmin 6vmax;
+    padding: 6vmax;
     border-radius: 2vmin;
     font-size: 18px;
     margin: auto 0;
     transition: padding 0.5s ease-out;
 }
 
-.passwordText, .copyButton, .generateButton{
+.passwordText, .copy-button, .generate-button{
     font-size: 5vmin;
     color: rgba(0, 0, 0, 0.865);
     border-radius: 5px;
@@ -51,33 +50,34 @@ body, html{
     margin-top: 1vmin;
 }
 
-.passDiv{
+.passwords-wrapper{
 	display: flex;
 	justify-content: space-between;	
 	width: 100%;
+    margin-top: 20px;
 }
 
-.buttonDiv{
+.button-wrapper{
     margin-top: 20px;
     width: 100%;
 }
 
-.generateButton{
+.generate-button{
     width: 100%;
     margin: 0px;
     background: rgba(255, 255, 255, 0.598);
     cursor: pointer;
 }
 
-.generateButton:hover{
+.generate-button:hover{
     background: rgba(255, 255, 255, 0.689);
 }
 
-.generateButton:active{
+.generate-button:active{
     background: rgba(239, 239, 239, 0.598);
 }
 
-.copyButton{
+.copy-button{
     background:rgba(239, 239, 239, 0.776);
     cursor: pointer;
     max-height: 15vh;
@@ -85,16 +85,16 @@ body, html{
     top: 10px;
 }
 
-.copyDisabled{
+.copy-disabled{
     pointer-events: none;
     background:rgba(239, 239, 239, 0.361);
 }
 
-.copyButton:hover{
+.copy-button:hover{
     background:rgba(239, 239, 239, 0.813);
 }
 
-.copyButton:active{
+.copy-button:active{
     background: rgb(248, 243, 243);
 }
 
@@ -118,16 +118,15 @@ body, html{
 	pointer-events: default !important;
 }
 
-.sliderDiv{
+.slider-wrapper{
     display: flex;
     flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
-    margin-top: 2.5vmin;
 }
 
-.sliderDiv p{
+.slider-wrapper p{
     margin: 1.5vmin auto;
 	font-size: 5vmin;
     transition: font-size 0.5s ease-out;
@@ -160,7 +159,7 @@ input[type="range"]::-webkit-slider-thumb {
     cursor: pointer;
 }
 
-.numberChar{
+.number-char{
     background: transparent;
     border: none;
     font-size: 5vmin;

@@ -1,8 +1,8 @@
 const passwordText = document.querySelector(".passwordText");
-const copyButton = document.querySelector(".copyButton");
-const generateButton = document.querySelector(".generateButton");
+const copyButton = document.querySelector(".copy-button");
+const generateButton = document.querySelector(".generate-button");
 const copied = document.querySelector(".copied");
-const numberChar = document.querySelector(".numberChar");
+const numberChar = document.querySelector(".number-char");
 const slider = document.querySelector(".slider");
 const passwords = document.getElementById("passwords");
 const numberPass = document.getElementById("numberPass");
@@ -62,6 +62,7 @@ numberChar.addEventListener("change", function(){
 	else if(numberChar.value<4)
         numberChar.value = 4;
     numberChar.value = Math.round(numberChar.value);
+    slider.value = Math.round(numberChar.value);
 });
 
 numberPass.addEventListener("change", function(){
@@ -70,6 +71,7 @@ numberPass.addEventListener("change", function(){
 	else if(numberPass.value<1)
         numberPass.value = 1;
     numberPass.value = Math.round(numberPass.value);
+    sliderPass.value = Math.round(numberPass.value);
 });
 
 function more(numb){
