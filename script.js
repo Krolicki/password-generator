@@ -11,8 +11,8 @@ const sliderPass = document.getElementById("sliderPass");
 var numberOfPasswords = 1;
 
 generateButton.addEventListener("click",function(){
-    if(copyButton.classList.contains("copyDisabled"))
-        copyButton.classList.remove("copyDisabled")
+    if(copyButton.classList.contains("copy-disabled"))
+        copyButton.classList.remove("copy-disabled")
     if(numberPass.value != numberOfPasswords){
         numberOfPasswords = numberPass.value;
         clear();
